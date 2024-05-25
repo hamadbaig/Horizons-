@@ -1,0 +1,225 @@
+.bck-aPropos {
+   background: url("public/img/plage.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    opacity:90%;
+}
+.flex {
+    display:flex;
+    justify-content:space-evenly;
+}
+
+.margin-top {
+  margin-top:7px;
+}
+
+
+/* img-galery*/
+.gallery {
+  gap: 6px; 
+  display: grid;
+  width: 450px;
+  aspect-ratio: 1;
+  grid: auto-flow 1fr/repeat(3,1fr);
+  gap: 6px;
+  margin: 0;
+  min-height: 90vh;
+  min-height: 50vh;
+  place-content: center;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(10%);
+  cursor: pointer;
+  transition: 0.5s
+  
+}
+.gallery img:hover {
+  filter: grayscale(1);
+}
+.gallery img:nth-child(2) {
+  grid-area: 1/2/span 2/span 2;
+  clip-path: polygon(0 0,100% 0,100% 100%,calc(50% + 6px/4) 100%,0 calc(50% - 6px/4))
+}
+.gallery img:nth-child(3) {
+  grid-area: 2/1/span 2/span 2;
+  clip-path: polygon(0 0,calc(50% - 6px/4) 0,100% calc(50% + 6px/4),100% 100%,0 100%);
+}
+
+.flex-direction-clm {
+    flex-direction: column;
+}
+.margin-left{
+  margin-left: 10px;
+  float:right;
+}
+
+
+/* ACORDEON */
+div.checkbox {
+  position: relative;
+  
+}
+.inputs-checkboxs-checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity:0;
+  visibility:0;
+  
+}
+.h2-checkbox {
+ font-size:32px;
+}
+.h1-checkbox{
+  padding:2px;
+  background:#1669b6;
+  color:white;
+  position: relative;
+}
+.label-checkbox::before{
+  content:"";
+  display: inline-block;
+  border: 15px solid transparent;
+  border-left:20px solid white;
+}
+.label-checkbox {
+  width:auto;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+div.p-checkbox {
+  max-height:2px;
+  overflow: hidden;
+  transition:max-height 0.5s;
+  background-color: white;
+  box-shadow:0 0 8px 0 rgba(0, 0, 0, 0.4);
+  margin-left:1em;
+  margin-right: 1em;
+  
+}
+
+.inputs-checkbox:checked ~ .h1-checkbox .label-checkbox::before {
+  border-left:15px solid transparent;
+  border-top:20px solid white;
+  margin-top:12px;
+  margin-right:10px;
+}
+.inputs-checkbox:checked ~ .h1-checkbox ~ div.p-checkbox {
+  max-height:100px;
+  margin:5px;
+}
+
+
+
+.btn-contactezNous {
+    margin-top: 5em;
+    padding:0.6em;
+    color: #ffffff;
+    background-color:#1669b6;
+    border-color:#145c9f;
+}
+
+.btn-contactezNous:hover {
+   
+    color:#1669b6;
+    background-color:white;
+    border-color:#145c9f;
+}
+
+
+
+
+/*card profile */
+.h2-body-card {
+  font-size:30px;
+   font-family: "Bree Serif";
+   ;
+}
+.team-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 9px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), #cccccc); 
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: circle(35% at 50% 50%);
+  transition: transform 0.6s ease;
+  border:none;
+ 
+
+}
+
+.team-card:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    
+}
+.team-card img:hover {
+  transform: translateY(-25px);
+  border: 4px solid #2e4b84; 
+  
+}
+
+.team-card:hover img {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.9); /* Măriți umbra la hover */
+}
+.team-card .info {
+  padding: 15px;
+}
+
+.team-card h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  
+}
+.team-card h2:hover {
+  color:#01b3a7;
+}
+
+.team-card p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #01b3a7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

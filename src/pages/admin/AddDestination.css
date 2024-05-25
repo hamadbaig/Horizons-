@@ -1,0 +1,93 @@
+.add-destination-container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.add-destination-form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-destination-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight:680;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.message span {
+  color: #dc3545;
+}
+
+.parag {
+   font-weight: 300;
+   font-style: italic;
+   color: #4d4d4d;
+   
+}
+.align-right {
+  text-align:right;
+}
+
+.margin-add {
+  margin-top:2em;
+  margin-bottom:2em;
+}
+
+.remove-activity {
+  margin-top:8px;
+  color:white;
+  background:red;
+  padding:5px;
+  border:none;
+}
+
+.remove-activity:hover {
+  color:red;
+  background:#ffe6e6;
+  font-weight:700;
+}
+
+.new-activity {
+  border:none;
+  color: #0000e6;
+}
+
+.new-activity:hover {
+  background:#0000e6;
+  color:white;
+}

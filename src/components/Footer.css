@@ -1,0 +1,84 @@
+.footer {
+   background-color: #2e4b84;
+   width: 100%;
+   padding: 20px 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.center {
+   padding: 20px;
+   width: 100%;
+   text-align: center;
+}
+.footer .container {
+   width: 90%;
+   margin: auto;
+}
+.footer .row {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 5em;
+   line-height: 1px;
+   justify-content: center;
+}
+.footer .row .col {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 14px;
+}
+.footer .row .col h3 {
+   color: white;
+   margin-bottom: 10px;
+}
+.footer .row .col a {
+   display: inline-block;
+   color: white;
+}
+.p-footer {
+   color: white;
+}
+.border-footer {
+   border-top: 2px solid #f2f2f2;
+}
+
+.flex-direction {
+   display: flex;
+   flex-direction: row;
+   gap: 1em;
+   justify-content: center;
+}
+.fa-instagram {
+   color: #E4405F;
+   transition: transform 0.2s ease;
+}
+.fa-facebook {
+   color: #1877F2;
+   transition: transform 0.2s ease;
+}
+.fa-pinterest {
+   color: #BD081C;
+   transition: transform 0.2s ease;
+}
+.fa-tiktok {
+   color: #131418;
+   transition: transform 0.2s ease;
+}
+.fa-brands:hover {
+   transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+   .footer .row {
+      grid-template-columns: 1fr;
+      gap: 2em;
+   }
+   .footer .row .col {
+      align-items: center;
+      text-align: center;
+   }
+   .flex-direction {
+      justify-content: center;
+   }
+}

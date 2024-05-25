@@ -1,0 +1,111 @@
+
+.newsletter {
+  background: url("img/plage01.jpg") center center / cover no-repeat;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.newsletter .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1.5em;
+}
+
+.newsletter .col h2,
+.newsletter .col p {
+  color: #002b4d;
+  text-align: center;
+}
+
+.newsletter .col p {
+  font-size: 16px;
+}
+
+.newsletter .col h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.newsletter .form div {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.newsletter .form input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 2em;
+  opacity: 70%;
+  text-indent: 1rem;
+}
+
+.newsletter .form .newsletter-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  outline: none;
+  border: none;
+  opacity: 70%;
+  color: #002b4d;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 2em;
+}
+
+.newsletter-btn {
+  opacity: 80%;
+  border-radius: 2em;
+  display:flex;
+  flex-direction:column;
+}
+
+
+@media (min-width: 768px) {
+  .newsletter {
+    height: 40vh;
+  }
+
+  .newsletter .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4em;
+    height: 100%;
+  }
+
+  .newsletter .col h2,
+  .newsletter .col p {
+    text-align: left;
+    margin-left: 150px;
+  }
+
+  .newsletter .col p {
+    font-size: 17px;
+  }
+
+  .newsletter .col h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  .newsletter .form div {
+    width: 90%;
+  }
+
+  .newsletter .form input {
+    font-size: 1.5rem;
+    padding: 1.1rem 0;
+  }
+
+  .newsletter .form button {
+    padding: 0.8rem 3rem;
+    font-size: 1.1rem;
+  }
+}

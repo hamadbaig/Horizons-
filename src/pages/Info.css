@@ -1,0 +1,100 @@
+.custom-destination-details-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.custom-destination-header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.custom-destination-image {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.custom-destination-info {
+  flex: 1;
+}
+
+.custom-destination-title {
+  margin-top: 0;
+}
+
+.custom-location, .custom-reviews, .custom-summary {
+  margin: 5px 0;
+}
+
+.custom-destination-content {
+  margin-bottom: 20px;
+}
+
+.custom-activity {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.custom-activity-image {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.custom-activity-info {
+  flex: 1;
+}
+
+.custom-activity-title, .custom-activity-description {
+  margin: 0;
+}
+
+.custom-buy-button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.custom-btn-buy {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.custom-comments-section {
+  margin-top: 20px;
+}
+
+.custom-comments-title {
+  margin-bottom: 10px;
+}
+
+.custom-comment-form {
+  margin-bottom: 20px;
+}
+
+.custom-comment-input {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.custom-btn-submit {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-comments-list {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.custom-comment {
+  margin-bottom: 10px;
+}

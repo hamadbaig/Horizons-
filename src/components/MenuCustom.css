@@ -1,0 +1,121 @@
+a {
+    text-decoration: none;
+}
+
+.menu-bg {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 5%;
+    font-family: Bree Serif;
+    color: #000000;
+}
+
+.menu-bg .logo-colors {
+    background: linear-gradient(to right, blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.menu-icon.open .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .bar2 {
+    opacity: 0;
+}
+
+.menu-icon.open .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    color: black;
+    font-size: 16px;
+}
+
+
+.btn-connexion {
+    color: black;
+    font-size: 16px;
+    border: 2px solid black;
+    padding: 5px 20px;
+    transition: 0.5s;
+    font-weight: bolder;
+}
+
+.btn-connexion:hover {
+    background-color: #24315c;
+    color: white;
+}
+
+/* Mode Mobile */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        transition: height 0.4s ease-in-out;
+        z-index: 1000; 
+    }
+    .nav-menu.open {
+        height: 100vh;
+    }
+    .nav-menu ul {
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .nav-menu ul li {
+        margin: 20px 0;
+    }
+}

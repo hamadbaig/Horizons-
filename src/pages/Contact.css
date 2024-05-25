@@ -1,0 +1,158 @@
+.bck-contact {
+    background: url("img/plage.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 65vh;
+    position: relative; 
+}
+
+
+.contact {
+    padding: 0 10%;
+    
+}
+
+.div-p-title {
+    margin-left: 20px;
+}
+.bck-form {
+    /* background: url("img/montagne.jpg");*/
+     background-color: gray;
+    background-size: cover;
+    opacity:80%;
+    border: 2px solid black;
+}
+.contact form {
+   
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.left-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.left-right .left , .left-right .right  {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+.contact form label {
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: 600
+}
+.contact form input {
+    padding: 8px;
+    outline: 0;
+    border: 1px solid #999;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+    outline: 0;
+    width: 100%;
+    padding: 10px;
+}
+.contact form input:focus , textarea:focus {
+    border: 3px solid black;
+}
+iframe {
+    height: 150px;
+    width: 100%;
+}
+.contact button {
+    width: fit-content;
+    padding: 8px 40px;
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.contact button:hover {
+    letter-spacing: 2px;
+}
+button {
+    margin-top:4px;
+}
+
+.flex {
+    dispaly:flex;
+}
+
+.flex-direction {
+  flex-direction:column;  
+}
+
+.icons {
+    margin-bottom: 3em;
+}
+
+.section-info {
+    padding:2em;
+    justify-content: space-evenly;
+    border: 7px solid #cccccc;
+    align-items:center;
+    width: 600px;
+    height:auto;
+}
+.section-info:hover {
+    
+     border: 3px solid #333333;
+    
+}
+.gap {
+    gap:7em;
+}
+
+.h1-nousContacter { 
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 0;
+    flex-direction:row;
+   
+    
+}
+
+.p-nousContacter {
+    border-left: 2px solid #e6e6e6;
+    flex:1;
+    margin-bottom: 26px; 
+    margin-left: 17px;
+}
+.div-h1-title {
+    text-align:start;
+}
+.div-p-title {
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+.carte {
+    width: 1900px;
+    
+}
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.zoomEffect {
+  animation: zoomAnimation 0.3s ease;
+}
+
+.zoomEffect:hover {
+  transform: scale(1.1);
+}

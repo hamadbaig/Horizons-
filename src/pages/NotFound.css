@@ -1,0 +1,11 @@
+.bck-404 {
+    background: url("img/404.png");
+    background-position: center;
+    height: 100vh;
+    margin-top:150px;
+   
+}
+
+.p-404 {
+    text-align:center;
+}
