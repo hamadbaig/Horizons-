@@ -2,20 +2,19 @@
   background: url("img/plage01.jpg") center center / cover no-repeat;
   padding: 20px;
   margin-top: 10px;
+  height: 40vh;
 }
 
 .newsletter .row {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
   gap: 1.5em;
   flex-wrap: wrap;
   line-height: 1;
 }
 .col {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  align-items: center;
 }
 .newsletter .col h2,
 .newsletter .col p {
@@ -96,8 +95,8 @@
   }
 
   .newsletter .col h2 {
-    margin-bottom: 2rem;
-    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
   }
 
   .newsletter .form div {
