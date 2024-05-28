@@ -39,7 +39,7 @@ const Newsletter = () => {
     <section className="newsletter">
       <div className="row">
         <div className="col">
-          <h2>Recevez notre lettre d'information</h2>
+          <h2>Recevez notre lettre d&apos;information</h2>
           <p>
             Ne manquez aucune offre spéciale, destination de rêve ou conseil de 
             voyage en vous abonnant à notre newsletter.

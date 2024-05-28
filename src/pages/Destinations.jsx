@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import img from "./img/plage.jpg";
+
 import "./Destinations.css";
 
 const Destinations = () => {
@@ -14,9 +16,7 @@ const Destinations = () => {
         const res = await axios.get("/api/destinations");
         setFilteredDestinations(res.data);
         setDestinations(res.data);
-      } catch (e) {
-        
-      }
+      } catch (e) {}
     };
 
     fetchDestinations();
@@ -37,7 +37,7 @@ const Destinations = () => {
     setFilteredDestinations(filtered);
   };
 
-const handleSortChange = (e) => {
+  const handleSortChange = (e) => {
     const sortValue = e.target.value;
     setSortBy(sortValue);
 
@@ -59,13 +59,13 @@ const handleSortChange = (e) => {
 
     setFilteredDestinations(sortedDestinations);
   };
-  
-  
+
   return (
     <>
       <section>
-        <article className="bck-destinations"></article>
-
+        <div className="bck-contact">
+          <img src={img}></img>
+        </div>
         <form className="search-box">
           <input
             onChange={handleChange}
@@ -75,13 +75,9 @@ const handleSortChange = (e) => {
             name="search"
             placeholder="Tapez pour rechercher"
           />
-          <input
-            className="search_submit"
-            value="Rechercher"
-            type="submit"
-          />
+          <input className="search_submit" value="Rechercher" type="submit" />
         </form>
-        
+
         <div className="sort-box">
           <label htmlFor="sortBy">Trier par :</label>
           <select
@@ -101,64 +97,53 @@ const handleSortChange = (e) => {
           <NavLink
             to={`/destination/${destination.id}`}
             key={i}
-            className="destination-link">
-            
-            <article>
-            <h2>    </h2>
-            </article>
-            
-            <article className="article-destination container">
-              <div className="flex">
-                <div className="img-destination">
-                  <img
-                    src={destination.imageUrl}
-                    alt={destination.title}
-                    width="400px"
-                  />
-                </div>
-                <div>
-                  <div className="margin-left overflow-price">
-                    <div className="flex">
-                      <div>
-                        <h2 className="h2-destination">{destination.title}</h2>
-                      </div>
-                      <div>
-                        <p className="price">
-                          À partir de ${destination.price.amount}
-                        </p>
-                      </div>
-                    </div>
-                    <p className="p-avis">Avis des clients ⭐⭐⭐⭐⭐</p>
-                    <p className="p-destination">{destination.summary}</p>
-                  </div>
-                  <div className="div-btn-pay">
-                    <NavLink to="#" className="btn-pay">
-                      Acheter ce circuit
-                    </NavLink>
-                  </div>
-                </div>
+            className="destination-link"
+          >
+            <div className="flex-main">
+              <div className="img-destination">
+                <img
+                  src={destination.imageUrl}
+                  alt={destination.title}
+                  width="310px"
+                />
               </div>
-            </article>
+              <div className="flex-sec">
+                <div>
+                  <h2 className="h2-destination">{destination.title}</h2>
+                </div>
+
+                <NavLink to="#" className="btn-pay">
+                  Acheter ce circuit
+                </NavLink>
+                <p className="price">À partir de ${destination.price.amount}</p>
+                {/* <p className="p-avis">Avis des clients ⭐⭐⭐⭐⭐</p>
+                    <p className="p-destination">{destination.summary}</p> */}
+              </div>
+            </div>
           </NavLink>
         ))}
       </section>
-      
-      
+
       <div className="destinations-container">
-      <h2 className="destinations-title">Découvrez nos destinations</h2>
-      <div className="destinations-list">
-        {destinations.map((destination) => (
-          <div key={destination.id} className="destination-card">
-            <img src={destination.imageUrl} alt={destination.name} className="destination-image" />
-            <div className="destination-info">
-              <h3 className="destination-name">{destination.name}</h3>
-              <p className="destination-description">{destination.description}</p>
+        <h2 className="destinations-title">Découvrez nos destinations</h2>
+        <div className="destinations-list">
+          {destinations.map((destination) => (
+            <div key={destination.id} className="destination-card">
+              <img
+                src={destination.imageUrl}
+                alt={destination.name}
+                className="destination-image"
+              />
+              <div className="destination-info">
+                <h3 className="destination-name">{destination.name}</h3>
+                <p className="destination-description">
+                  {destination.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-    
     </>
   );
 };

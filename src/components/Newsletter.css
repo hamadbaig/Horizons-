@@ -1,8 +1,8 @@
 .newsletter {
-  background: url("img/plage01.jpg") center center / cover no-repeat;
+  background: url("../pages/img/plage01.jpg") center center / cover no-repeat;
   padding: 20px;
   margin-top: 10px;
-  height: 40vh;
+  height: auto;
 }
 
 .newsletter .row {
@@ -39,7 +39,7 @@
 }
 
 .newsletter .form input {
-  width: 100%;
+  width: 90%;
   outline: none;
   border: none;
   padding: 1rem;
@@ -57,7 +57,8 @@
   outline: none;
   border: none;
   opacity: 70%;
-  color: #002b4d;
+  background-color: #2e4b84;
+  color: white;
   padding: 0.8rem 2rem;
   font-size: 1rem;
   font-weight: 500;
@@ -71,11 +72,7 @@
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
-  .newsletter {
-    height: 40vh;
-  }
-
+@media (min-width: 1024px) {
   .newsletter .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -83,7 +80,9 @@
     gap: 4em;
     height: 100%;
   }
-
+  .newsletter {
+    height: 40vh;
+  }
   .newsletter .col h2,
   .newsletter .col p {
     text-align: left;
@@ -100,12 +99,12 @@
   }
 
   .newsletter .form div {
-    width: 90%;
   }
 
   .newsletter .form input {
     font-size: 1.5rem;
     padding: 1.1rem 0;
+    width: 100% !important;
   }
 
   .newsletter .form button {

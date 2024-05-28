@@ -41,7 +41,7 @@ const Home = () => {
       
       <section className="bck">
         <h2>Découvrez le monde autrement </h2>
-        <p>Partez en vacances l'esprit tranquille grâce à notre agence qui s'occupe de tout</p>
+        <p>Partez en vacances l&apos;esprit tranquille grâce à notre agence qui s'occupe de tout</p>
     </section>
 
     <section className="container">
@@ -52,7 +52,7 @@ const Home = () => {
            </div>
             <div className="right">
                 <h3>Évadez-vous du quotidien et laissez-vous porter vers des destinations de rêve !</h3>
-                <p>Horizons Lointains est une agence de voyage française qui propose des prestations sur mesure pour les voyageurs individuels, les groupes et les entreprises. Avec plus de 50 agences en France et en Moldavie, Horizons Lointains offre une large gamme de services, allant de la réservation de vols, d'hôtels, de croisières, de circuits touristiques, de séjours en tout inclus et bien plus encore.</p>
+                <p>Horizons Lointains est une agence de voyage française qui propose des prestations sur mesure pour les voyageurs individuels, les groupes et les entreprises. Avec plus de 50 agences en France et en Moldavie, Horizons Lointains offre une large gamme de services, allant de la réservation de vols, d&apos;hôtels, de croisières, de circuits touristiques, de séjours en tout inclus et bien plus encore.</p>
                 <NavLink to="/destinations" className="btn-connexion">Lire Plus</NavLink>
             </div>
         </div>
@@ -81,7 +81,7 @@ const Home = () => {
                     <div>
                         <h4>Rome</h4>
                         <p>Découvrez la ville éternelle et plongez</p>
-                        <p>dans l'histoire passionnante de Rome</p>
+                        <p>dans l&apos;histoire passionnante de Rome</p>
                         <NavLink to="/destinations" className="btn-connexion">Lire Plus</NavLink>
                     </div>
                 </div>
@@ -104,8 +104,8 @@ const Home = () => {
                 <div className="content">
                     <div>
                         <h4>Le Caire</h4>
-                        <p>Plongez dans l'histoire millénaire et la</p>
-                        <p>culture vibrante de l'Égypte</p>
+                        <p>Plongez dans l&apos;histoire millénaire et la</p>
+                        <p>culture vibrante de l&apos;Égypte</p>
                         <NavLink to="/destinations" className="btn-connexion">Lire Plus</NavLink>
                     </div>
                 </div>
@@ -149,15 +149,15 @@ const Home = () => {
         <div className="columns">
           <div className="column">
             <h2 className="column-title">Passeport et visas</h2>
-            <p className="column-text">Vérifiez si vous avez un passeport valide et si vous avez besoin d'un visa pour les destinations que vous prévoyez de visiter. Assurez-vous de vous conformer aux exigences en matière de validité du passeport et de visa pour chaque pays que vous visiterez.</p>
+            <p className="column-text">Vérifiez si vous avez un passeport valide et si vous avez besoin d&apos;un visa pour les destinations que vous prévoyez de visiter. Assurez-vous de vous conformer aux exigences en matière de validité du passeport et de visa pour chaque pays que vous visiterez.</p>
           </div>
           <div className="column">
             <h2 className="column-title">Vaccinations</h2>
-            <p className="column-text">Renseignez-vous sur les vaccinations recommandées ou obligatoires pour les destinations que vous allez visiter. Assurez-vous d'être à jour avec vos vaccinations habituelles et consultez un professionnel de la santé pour obtenir des conseils sur les vaccinations spécifiques à votre destination.</p>
+            <p className="column-text">Renseignez-vous sur les vaccinations recommandées ou obligatoires pour les destinations que vous allez visiter. Assurez-vous d&apos;être à jour avec vos vaccinations habituelles et consultez un professionnel de la santé pour obtenir des conseils sur les vaccinations spécifiques à votre destination.</p>
           </div>
           <div className="column">
             <h2 className="column-title">Change de devises</h2>
-            <p className="column-text">Vérifiez les taux de change et les options pour changer de devises avant de partir en voyage. Il peut être utile d'avoir un peu de monnaie locale pour les dépenses initiales à votre arrivée à destination.</p>
+            <p className="column-text">Vérifiez les taux de change et les options pour changer de devises avant de partir en voyage. Il peut être utile d&apos;avoir un peu de monnaie locale pour les dépenses initiales à votre arrivée à destination.</p>
           </div>
         </div>
       </div>
