@@ -1,11 +1,10 @@
-import react from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 import img from "./img/plage.jpg";
-
 import "./Contact.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [formInput, setFormInput] = useState({
@@ -19,16 +18,16 @@ const Contact = () => {
   const [disableInput, setDisableInput] = useState(false);
   const [message, setMessage] = useState("");
 
-  // Il faut envoyer les données de ce formulaire dans le localStorage,
-
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setFormInput({ ...formInput, [name]: value, date: new Date() });
     setMessage("");
   };
 
   const handleSubmit = (e) => {
+    const serviceId = "service_6gfazn1";
+    const templateId = "template_dovyfwr";
+    const publicKey = "SvzjE8cl0x69WTzFm";
     e.preventDefault();
     if (disableInput) {
       return;
@@ -43,11 +42,29 @@ const Contact = () => {
       formInput.phoneNumber.trim() === "" ||
       formInput.message.trim() === ""
     ) {
-      return setMessage("Vous ne pouvez pas envoyer des données vide");
+      return setMessage("Vous ne pouvez pas envoyer des données vides");
     }
-    dataFromLS.push(formInput);
 
+    dataFromLS.push(formInput);
     localStorage.setItem("contact", JSON.stringify(dataFromLS));
+    emailjs
+      .send(serviceId, templateId, formInput, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully !", response);
+        setFormInput({
+          fullName: "",
+          objet: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.log("Errror sending email", error);
+      });
+    // Log the form data as an object
+    console.log(formInput);
+
     setDisableInput(true);
     setTimeout(() => {
       setDisableInput(false);
@@ -57,10 +74,10 @@ const Contact = () => {
   return (
     <>
       <div className="bck-contact">
-        <img src={img}></img>
+        <img src={img} alt="Background" />
       </div>
       <section className="contact">
-        <div className=" container flex  ">
+        <div className="container flex">
           <div className="div-h1-title">
             <h1 className="h1-nousContacter">Nous Contacter</h1>
           </div>
@@ -82,7 +99,7 @@ const Contact = () => {
                   id="fullName"
                   type="text"
                   onChange={handleChange}
-                  value={formInput.fulName}
+                  value={formInput.fullName}
                   name="fullName"
                 />
 
@@ -100,13 +117,13 @@ const Contact = () => {
                 <label htmlFor="email">Email</label>
                 <input
                   id="email"
-                  type="text"
+                  type="email"
                   onChange={handleChange}
                   value={formInput.email}
                   name="email"
                 />
 
-                <label htmlFor="phoneNumber">Numero de téléphone </label>
+                <label htmlFor="phoneNumber">Numero de téléphone</label>
                 <input
                   id="phoneNumber"
                   type="text"
@@ -119,13 +136,12 @@ const Contact = () => {
             <label htmlFor="message">Message</label>
             <textarea
               id="message"
-              type="text"
               onChange={handleChange}
               value={formInput.message}
               name="message"
               cols="30"
               rows="10"
-              placeholder="Votre message "
+              placeholder="Votre message"
             ></textarea>
             <button type="submit">Envoyer</button>
           </form>
@@ -134,7 +150,7 @@ const Contact = () => {
 
       <section className="container">
         <article className="flex gap">
-          <div className="flex-direction section-info  center">
+          <div className="flex-direction section-info center">
             <div className="icons center">
               <img
                 src="img/icons/phone-call.png"
@@ -144,6 +160,7 @@ const Contact = () => {
                   display: "block",
                 }}
                 className="zoomEffect"
+                alt="Phone"
               />
             </div>
             <div>
@@ -152,12 +169,13 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex-direction section-info  center">
+          <div className="flex-direction section-info center">
             <div className="icons">
               <img
                 src="img/icons/marker.png"
                 style={{ width: "50px", margin: "auto", display: "block" }}
                 className="zoomEffect"
+                alt="Location"
               />
             </div>
             <div>
@@ -172,6 +190,7 @@ const Contact = () => {
                 src="img/icons/message.png"
                 style={{ width: "50px", margin: "auto", display: "block" }}
                 className="zoomEffect"
+                alt="Email"
               />
             </div>
             <div>
@@ -180,15 +199,14 @@ const Contact = () => {
             </div>
           </div>
         </article>
-        <article className="container carte location ">
+        <article className="container carte location">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2640.6371036040337!2d3.009361215608335!3d48.559345279259354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ef4fab2c52e85d%3A0xe2c21682c076e288!2s42%20Rue%20des%20Fontaines%2C%2077370%20Nangis!5e0!3m2!1sfr!2sfr!4v1677598279773!5m2!1sfr!2sfr"
-            // width="100%"
-            // height="500"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="Google Map"
           ></iframe>
         </article>
       </section>
