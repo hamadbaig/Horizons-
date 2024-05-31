@@ -29,7 +29,7 @@ a {
   flex-direction: column;
   cursor: pointer;
   position: fixed;
-  top: 15px;
+  top: 25px;
   right: 20px;
   z-index: 1100;
 }
@@ -125,5 +125,10 @@ a {
   }
   .nav-menu ul li a:hover {
     color: aqua;
+  }
+}
+@media (max-width: 450px) {
+  .menu-bg .logo-colors {
+    font-size: 24px;
   }
 }
